@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex
+}
+
+.settings {
+    position: absolute;
+    overflow-y: auto;
+    overflow-x: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: calc(100% - 220px);
+    min-height: 450px;
+    padding: 0 10px;
+    background-color: lightgrey;
+}
+
+.settings .container {
+    width: 100%;
+    height: 25%;
+    padding-top: 20px
+}
+
+.settings .container .line {
+    display: flex;
+    margin: 5px 0;
+    width: 200px;
+}
+
+.camera-window {
+    position: absolute;
+    top: 0;
+    left: 220px;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    background-color: darkgray;
+}
+
+.camera-window canvas {
+    width: 100%;
+    height: 100%;
+    border: 1px solid darkgray;
+    border-radius: 1em;
+    background-color: white;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Virtual Camra</title>
+    <link rel="stylesheet" href="MainPage.css"/>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="Points.js" type="application/javascript"></script>
+    <script src="Main.js" type="application/javascript"></script>
+</head>
+<body>
+<main>
+    <div class="settings">
+        <div class="container">
+            <p>
+                <b>Położenie kamery:</b><br/>
+                (a-d | r-f | w-s)
+            </p>
+            <div class="line" style="display: flex">
+                <div style="width: 10%">X:</div>
+                <div style="width: 30%" id="camera-param-x"></div>
+                <Label style="width: 50%">
+                    <input style="width: 90%" type="number" placeholder="Transl. X"
+                           onchange="setNewCameraParam(this.value, 'x')">
+                </Label>
+            </div>
+            <div class="line">
+                <div style="width: 10%">Y:</div>
+                <div style="width: 30%" id="camera-param-y"></div>
+                <Label style="width: 50%">
+                    <input style="width: 90%" type="number" placeholder="Transl. Y"
+                           onchange="setNewCameraParam(this.value, 'y')">
+                </Label>
+            </div>
+            <div class="line">
+                <div style="width: 10%">Z:</div>
+                <div style="width: 30%" id="camera-param-z"></div>
+                <Label style="width: 50%">
+                    <input style="width: 90%" type="number" placeholder="Transl. Z"
+                           onchange="setNewCameraParam(this.value, 'z')">
+                </Label>
+            </div>
+        </div>
+        <div class="container">
+            <p>
+                <b>Rotacja kamery:</b><br/>
+                (lewy przycisk + kursor)
+            </p>
+            <div class="line">
+                <div style="width: 22%">Oś X:</div>
+                <div style="width: 18%" id="camera-param-axis-x"></div>
+                <Label style="width: 40%">
+                    <input style="width: 100%" type="number" placeholder="Spin X"
+                           onchange="setNewCameraParam(this.value, 'axis-x')">
+                </Label>
+            </div>
+            <div class="line">
+                <div style="width: 22%">Oś Y:</div>
+                <div style="width: 18%" id="camera-param-axis-y"></div>
+                <Label style="width: 40%">
+                    <input style="width: 100%" type="number" placeholder="Spin Y"
+                           onchange="setNewCameraParam(this.value, 'axis-y')">
+                </Label>
+            </div>
+            <div class="line">
+                <div style="width: 22%">Oś Z:</div>
+                <div style="width: 18%" id="camera-param-axis-z"></div>
+                <Label style="width: 40%">
+                    <input style="width: 100%" type="number" placeholder="Spin Z"
+                           onchange="setNewCameraParam(this.value, 'axis-z')">
+                </Label>
+            </div>
+        </div>
+        <div class="container">
+            <p style="margin-bottom: 5px"><b>Przybliżenie</b><br/>(Shift + scroll)</p>
+            <div>
+                <span>Zoom:</span>
+                <span style="width: 20px" id="camera-param-zoom"></span>
+            </div>
+            <p style="margin-bottom: 5px"><b>Odległość ogniskowa</b><br/>(Shift + alt + scroll)</p>
+            <div>
+                <span>Ogniskowa:</span>
+                <span style="width: 20px" id="camera-param-focal"></span>
+            </div>
+        </div>
+    </div>
+    <div class="camera-window">
+        <canvas id='myCanvas' tabindex='1'></canvas>
+    </div>
+</main>
+</body>
+</html>
