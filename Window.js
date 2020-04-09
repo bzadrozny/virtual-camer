@@ -8,14 +8,15 @@ let axis_y = 0;
 let axis_z = 0;
 //odgległość kamery od ekranu
 let zoom = 1;
-let focalDistance = 25;
+let focalDistance = 5;
 let cameraHigh;
 let cameraWidth;
 
 window.onload = () => {
-    document.getElementById('myCanvas').addEventListener("keydown", handleChangeCameraParamClick);
-    document.getElementById('myCanvas').addEventListener('wheel', updateZoomAndFocal);
-    document.getElementById('myCanvas').addEventListener('mousemove', updateAngels);
+    let canvas = document.getElementById('myCanvas');
+    canvas.addEventListener("keydown", handleChangeCameraParamClick);
+    canvas.addEventListener('wheel', updateZoomAndFocal);
+    canvas.addEventListener('mousemove', updateAngels);
 };
 
 document.onreadystatechange = () => {
@@ -108,4 +109,18 @@ updateCanvasSize = () => {
     let canvas = document.getElementById("myCanvas");
     cameraWidth = canvas.width = canvas.clientWidth - 2 * canvas.style.borderWidth;
     cameraHigh = canvas.height = canvas.clientHeight - 2 * canvas.style.borderWidth;
+};
+
+renderCameraWindow = (beginningOperation = OPERATION.SWIPE) => {
+    if (beginningOperation === OPERATION.SWIPE) {
+        swipePoints();
+        spinPoints();
+        resizePoints();
+    } else if (beginningOperation === OPERATION.SPUN) {
+        spinPoints();
+        resizePoints();
+    } else if (beginningOperation === OPERATION.MAP) {
+        resizePoints();
+    }
+    printObjects();
 };

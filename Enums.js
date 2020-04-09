@@ -1,10 +1,10 @@
 const OPERATION = {
-    SWIPE: {value: 0},
-    SPUN: {value: 1},
-    MAP: {value: 2}
+    SWIPE: 0,
+    SPUN: 1,
+    MAP: 2
 };
 
 const OBJECT_TYPE = {
-  POINT: {value: 0},
-  LINE: {value: 1}
+  POINT: 0,
+  LINE: 1
 };
