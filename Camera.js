@@ -28,12 +28,11 @@ updateZoomAndFocal = (e) => {
         });
         showPoints();
     }
+    e.stopPropagation();
 };
 
-let operationalFlag = false;
 updateAngels = (e) => {
-    if (operationalFlag || e.buttons !== 1) return;
-    operationalFlag = true;
+    if (e.buttons !== 1) return;
     let angle_z = axis_z * Math.PI / 180;
     let sin_z = Math.sin(angle_z);
     let cos_z = Math.cos(angle_z);
@@ -53,7 +52,6 @@ updateAngels = (e) => {
     document.getElementById("camera-param-axis-y").innerText = "" + axis_y;
     document.getElementById("camera-param-axis-z").innerText = "" + axis_z;
     renderCameraWindow(OPERATION.SPUN);
-    operationalFlag = false;
 };
 
 moveForwardAndBack = (d) => {
