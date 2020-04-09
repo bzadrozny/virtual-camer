@@ -12,7 +12,7 @@ updateZoomAndFocal = (e) => {
             }
             return point;
         });
-        printScreen();
+        showPoints();
     } else if (e.shiftKey && e.altKey) {
         let oldFocal = focalDistance;
         focalDistance = Math.abs(focalDistance -= e.deltaY / 100);
@@ -26,24 +26,23 @@ updateZoomAndFocal = (e) => {
             }
             return point;
         });
-        printScreen();
+        showPoints();
     }
 };
 
+let operationalFlag = false;
 updateAngels = (e) => {
-    if (e.buttons !== 1) return;
+    if (operationalFlag || e.buttons !== 1) return;
+    operationalFlag = true;
     let angle_z = axis_z * Math.PI / 180;
     let sin_z = Math.sin(angle_z);
     let cos_z = Math.cos(angle_z);
     axis_x += (e.movementY * cos_z + e.movementX * sin_z) / 4;
     axis_y += (e.movementX * cos_z + e.movementY * sin_z) / 4;
-    console.log('0: ' + axis_x);
     if (axis_x < -90) {
-        console.log('1: ' + axis_x);
         axis_z = (axis_z + 180);
         axis_x = -180 - axis_x;
     } else if (axis_x > 90) {
-        console.log('2: ' + axis_x);
         axis_z = (axis_z + 180);
         axis_x = 180 - axis_x;
     }
@@ -53,7 +52,8 @@ updateAngels = (e) => {
     document.getElementById("camera-param-axis-x").innerText = "" + axis_x;
     document.getElementById("camera-param-axis-y").innerText = "" + axis_y;
     document.getElementById("camera-param-axis-z").innerText = "" + axis_z;
-    renderCameraWindow('spun');
+    renderCameraWindow(OPERATION.SPUN);
+    operationalFlag = false;
 };
 
 moveForwardAndBack = (d) => {
@@ -112,4 +112,47 @@ moveLeftAndRight = (d) => {
     factor_z = parseFloat((factor_z + move_z).toFixed(3));
     factor_x = parseFloat((factor_x + move_x).toFixed(3));
     factor_y = parseFloat((factor_y + move_y).toFixed(3));
+};
+
+renderCameraWindow = (beginningOperation = OPERATION.SWIPE) => {
+    if (beginningOperation === OPERATION.SWIPE) {
+        swipePoints();
+        spunPoints();
+        mapPoints();
+    } else if (beginningOperation === OPERATION.SPUN) {
+        spunPoints();
+        mapPoints();
+    } else if (beginningOperation === OPERATION.MAP) {
+        mapPoints();
+    }
+    showPoints();
+};
+
+showPoints = () => {
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, cameraWidth, cameraHigh);
+    mappedPoints_2d.sort((p1, p2) => p1.d < p2.d ? 1 : p1.d === p2.d ? 0 : -1);
+    mappedPoints_2d.forEach(p => {
+        let {x, y, z, d, c} = p;
+        if (z < 0) return;
+        ctx.beginPath();
+        ctx.arc(
+            x + cameraWidth / 2,
+            cameraHigh / 2 - y,
+            d < 100 ? 2 : d < 300 ? d / 50 : 6,
+            0, 2 * Math.PI, true
+        );
+        ctx.fillStyle = getColorFromDistance(d, c);
+        ctx.filter = `blur(${d < 1000 ? d / 125 : 8}px)`;
+        ctx.fill();
+    });
+};
+
+getColorFromDistance = (distance, color) => {
+    let opacity = distance === 0 ?
+        1 : distance > 1000 ?
+            0.125 : 125 / distance;
+    color = color === undefined ? 0 : color;
+    return `rgba(${color},${color},${color},${opacity})`;
 };
