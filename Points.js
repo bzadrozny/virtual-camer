@@ -6,7 +6,7 @@ let points_3d = [
     {
         type: OBJECT_TYPE.LINE,
         points: [
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: -50.0, z: 50.0},
+            {type: OBJECT_TYPE.POINT, x: -50.0, y: -50.0, z: 50.0, c:{r:255, g:70, b:20}},
             {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: 50.0},
             {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: 50.0},
             {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: 50.0},
