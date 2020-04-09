@@ -28,7 +28,6 @@ updateZoomAndFocal = (e) => {
         });
         printObjects();
     }
-    e.stopPropagation();
 };
 
 updateAngels = (e) => {

@@ -1,5 +1,9 @@
 let points_3d = [
     {
+        type: OBJECT_TYPE.POINT,
+        x: 0.0, y: 0.0, z: 100.0
+    },
+    {
         type: OBJECT_TYPE.LINE,
         points: [
             {type: OBJECT_TYPE.POINT, x: -50.0, y: -50.0, z: 50.0},
@@ -8,21 +12,28 @@ let points_3d = [
             {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: 50.0},
             {type: OBJECT_TYPE.POINT, x: -50.0, y: -50.0, z: 50.0},
         ],
-        isFigure: true,
         isReplete: false
     },
-    {type: OBJECT_TYPE.POINT, x: 0.0, y: 0.0, z: 0.0},
-    {type: OBJECT_TYPE.POINT, x: 0.0, y: 10.0, z: 100.0},
-    {type: OBJECT_TYPE.POINT, x: 200.0, y: 10.0, z: 100.0},
-    {type: OBJECT_TYPE.POINT, x: 400.0, y: 10.0, z: 100.0},
-    {type: OBJECT_TYPE.POINT, x: 600.0, y: 10.0, z: 100.0},
-    {type: OBJECT_TYPE.POINT, x: 800.0, y: 10.0, z: 100.0},
-    {type: OBJECT_TYPE.POINT, x: 1000.0, y: 10.0, z: 100.0},
-    {type: OBJECT_TYPE.POINT, x: -200.0, y: 10.0, z: 100.0},
-    {type: OBJECT_TYPE.POINT, x: -400.0, y: 10.0, z: 100.0},
-    {type: OBJECT_TYPE.POINT, x: -600.0, y: 10.0, z: 100.0},
-    {type: OBJECT_TYPE.POINT, x: -800.0, y: 10.0, z: 100.0},
-    {type: OBJECT_TYPE.POINT, x: -1000.0, y: 10.0, z: 100.0},
+    {
+        type: OBJECT_TYPE.LINE,
+        points: [
+            {type: OBJECT_TYPE.POINT, x: 200.0, y: 50.0, z: 100.0},
+            {type: OBJECT_TYPE.POINT, x: 400.0, y: 50.0, z: 100.0},
+            {type: OBJECT_TYPE.POINT, x: 600.0, y: 50.0, z: 100.0},
+            {type: OBJECT_TYPE.POINT, x: 800.0, y: 50.0, z: 100.0},
+            {type: OBJECT_TYPE.POINT, x: 1000.0, y: 50.0, z: 100.0}
+        ]
+    },
+    {
+        type: OBJECT_TYPE.LINE,
+        points: [
+            {type: OBJECT_TYPE.POINT, x: -200.0, y: -50.0, z: 100.0},
+            {type: OBJECT_TYPE.POINT, x: -400.0, y: -50.0, z: 100.0},
+            {type: OBJECT_TYPE.POINT, x: -600.0, y: -50.0, z: 100.0},
+            {type: OBJECT_TYPE.POINT, x: -800.0, y: -50.0, z: 100.0},
+            {type: OBJECT_TYPE.POINT, x: -1000.0, y: -50.0, z: 100.0}
+        ]
+    }
 ];
 
 let swipedPoints_3d = [];
