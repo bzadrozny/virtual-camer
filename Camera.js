@@ -1,7 +1,7 @@
 updateZoomAndFocal = (e) => {
     if (e.shiftKey && !e.altKey) {
         let oldZoom = zoom;
-        zoom = Math.abs(zoom -= e.deltaY / 100);
+        zoom = parseFloat(Math.abs(zoom - e.deltaY / 100).toFixed(3));
         document.getElementById("camera-param-zoom").innerText = "" + zoom;
         let conversion = zoom / oldZoom;
         mappedPoints_2d = mappedPoints_2d.map(point => {
@@ -15,7 +15,7 @@ updateZoomAndFocal = (e) => {
         printObjects();
     } else if (e.shiftKey && e.altKey) {
         let oldFocal = focalDistance;
-        focalDistance = Math.abs(focalDistance -= e.deltaY / 100);
+        focalDistance = parseFloat(Math.abs(focalDistance - e.deltaY / 100).toFixed(3));
         document.getElementById("camera-param-focal").innerText = "" + focalDistance;
         mappedPoints_2d = mappedPoints_2d.map(point => {
             let {x, y, z} = point;

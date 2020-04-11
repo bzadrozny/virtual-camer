@@ -1,39 +1,49 @@
 let points_3d = [
     {
         type: OBJECT_TYPE.POINT,
-        x: 0.0, y: 0.0, z: 100.0
+        x: 0.0, y: 0.0, z: 100.0,
+        c: {r: 70, g: 255, b: 20}
     },
     {
         type: OBJECT_TYPE.LINE,
         points: [
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: -50.0, z: 50.0, c:{r:255, g:70, b:20}},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: -50.0, z: 50.0},
-        ],
-        isReplete: false
+            {type: OBJECT_TYPE.POINT, x: -50.0, y: -50.0, z: 50.0, c: {r: 20, g: 70, b: 220}},
+            {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: 50.0, c: {r: 180, g: 120, b: 120}},
+            {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: 50.0, c: {r: 20, g: 70, b: 220}},
+            {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: 50.0, c: {r: 180, g: 120, b: 120}},
+            {type: OBJECT_TYPE.POINT, x: -50.0, y: -50.0, z: 50.0, c: {r: 20, g: 70, b: 220}},
+        ]
     },
     {
         type: OBJECT_TYPE.LINE,
         points: [
             {type: OBJECT_TYPE.POINT, x: 200.0, y: 50.0, z: 100.0},
-            {type: OBJECT_TYPE.POINT, x: 400.0, y: 50.0, z: 100.0},
+            {type: OBJECT_TYPE.POINT, x: 400.0, y: 50.0, z: 100.0, c: {r: 255, g: 70, b: 20}},
             {type: OBJECT_TYPE.POINT, x: 600.0, y: 50.0, z: 100.0},
-            {type: OBJECT_TYPE.POINT, x: 800.0, y: 50.0, z: 100.0},
+            {type: OBJECT_TYPE.POINT, x: 800.0, y: 50.0, z: 100.0, c: {r: 255, g: 70, b: 20}},
             {type: OBJECT_TYPE.POINT, x: 1000.0, y: 50.0, z: 100.0}
         ]
     },
+    {type: OBJECT_TYPE.POINT, x: 200.0, y: 50.0, z: 100.0, c: {r: 255, g: 70, b: 20}},
+    {type: OBJECT_TYPE.POINT, x: 400.0, y: 50.0, z: 100.0},
+    {type: OBJECT_TYPE.POINT, x: 600.0, y: 50.0, z: 100.0, c: {r: 255, g: 70, b: 20}},
+    {type: OBJECT_TYPE.POINT, x: 800.0, y: 50.0, z: 100.0},
+    {type: OBJECT_TYPE.POINT, x: 1000.0, y: 50.0, z: 100.0, c: {r: 255, g: 70, b: 20}},
     {
         type: OBJECT_TYPE.LINE,
         points: [
-            {type: OBJECT_TYPE.POINT, x: -200.0, y: -50.0, z: 100.0},
-            {type: OBJECT_TYPE.POINT, x: -400.0, y: -50.0, z: 100.0},
-            {type: OBJECT_TYPE.POINT, x: -600.0, y: -50.0, z: 100.0},
-            {type: OBJECT_TYPE.POINT, x: -800.0, y: -50.0, z: 100.0},
-            {type: OBJECT_TYPE.POINT, x: -1000.0, y: -50.0, z: 100.0}
+            {type: OBJECT_TYPE.POINT, x: -200.0, y: 50.0, z: 100.0, c: {r: 255, g: 70, b: 20}},
+            {type: OBJECT_TYPE.POINT, x: -400.0, y: 50.0, z: 100.0},
+            {type: OBJECT_TYPE.POINT, x: -600.0, y: 50.0, z: 100.0, c: {r: 255, g: 70, b: 20}},
+            {type: OBJECT_TYPE.POINT, x: -800.0, y: 50.0, z: 100.0},
+            {type: OBJECT_TYPE.POINT, x: -1000.0, y: 50.0, z: 100.0, c: {r: 255, g: 70, b: 20}}
         ]
-    }
+    },
+    {type: OBJECT_TYPE.POINT, x: -200.0, y: 50.0, z: 100.0},
+    {type: OBJECT_TYPE.POINT, x: -400.0, y: 50.0, z: 100.0, c: {r: 255, g: 70, b: 20}},
+    {type: OBJECT_TYPE.POINT, x: -600.0, y: 50.0, z: 100.0},
+    {type: OBJECT_TYPE.POINT, x: -800.0, y: 50.0, z: 100.0, c: {r: 255, g: 70, b: 20}},
+    {type: OBJECT_TYPE.POINT, x: -1000.0, y: 50.0, z: 100.0}
 ];
 
 let swipedPoints_3d = [];
@@ -104,12 +114,15 @@ function resize(points) {
     return points.map(point => {
         if (point.type === OBJECT_TYPE.POINT) {
             let {x, y, z, ...params} = point;
-            let fullDistance = Math.abs(z) + focalDistance;
-            if (fullDistance !== 0) {
+            let fullDistance = z + focalDistance;
+            if (fullDistance > 0) {
                 x = x * zoomTimesFocal / fullDistance;
                 y = y * zoomTimesFocal / fullDistance;
+            } else if (fullDistance < 0) {
+                x += x - x * zoomTimesFocal / fullDistance;
+                y += y - y * zoomTimesFocal / fullDistance;
             }
-            let d = Math.sqrt(x * x + y * y + z * z);
+            let d = Math.sqrt(0.5 * (x * x + y * y) + 2 * z * z);
             return {x, y, z, d, ...params};
         } else {
             let {points, ...params} = point;

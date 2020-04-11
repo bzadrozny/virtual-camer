@@ -13,14 +13,14 @@ printObjects = () => {
 
 getPointColor = (distance, color) => {
     let opacity = distance === 0 ?
-        1 : distance > 500 ?
-            0.125 : 62.5 / distance;
+        1 : distance > 1000 ?
+            0.125 : 1 - distance / 8000;
     color = color === undefined ? {r: 0, g: 0, b: 0} : color;
     return `rgba(${color.r},${color.g},${color.b},${opacity})`;
 };
 
 getPointBlur = (distance) => {
-    return `blur(${distance < 500 ? distance / 125 : 8}px)`;
+    return `blur(${distance < 1000 ? distance / 125 : 8}px)`;
 };
 
 getLinearGradient = (x1, y1, d1, c1, x2, y2, d2, c2) => {
@@ -28,7 +28,7 @@ getLinearGradient = (x1, y1, d1, c1, x2, y2, d2, c2) => {
     gradient.addColorStop(0.0, getPointColor(d1, c1));
     gradient.addColorStop(1.0, getPointColor(d2, c2));
     return gradient;
-}
+};
 
 printPoint = (point) => {
     let {x, y, z, d, c} = point;
@@ -43,6 +43,7 @@ printPoint = (point) => {
         0, 2 * Math.PI, true
     );
     ctx.fill();
+    ctx.closePath();
 };
 
 function cutLineByScreen(previousPoint, point) {
@@ -54,7 +55,7 @@ function cutLineByScreen(previousPoint, point) {
         let delta_y = factor * Math.abs(y1 - y2);
         x2 = x2 > x1 ? x1 + delta_x : x1 - delta_x;
         y2 = y2 > y1 ? y1 + delta_y : y1 - delta_y;
-        d2 = Math.sqrt(x2 * x2 + y2 * y2);
+        d2 = 0;
     }
     return {x1, y1, d1, c1, x2, y2, d2, c2};
 }
@@ -67,18 +68,17 @@ function printLine(line) {
             return;
         }
         let {x1, y1, d1, c1, x2, y2, d2, c2} = cutLineByScreen(previousPoint, point);
+        x1 += cameraWidth / 2;
+        x2 += cameraWidth / 2;
+        y1 = cameraHigh / 2 - y1;
+        y2 = cameraHigh / 2 - y2;
         ctx.strokeStyle = getLinearGradient(x1, y1, d1, c1, x2, y2, d2, c2);
         ctx.filter = getPointBlur(d1);
         ctx.beginPath();
-        ctx.moveTo(
-            x1 + cameraWidth / 2,
-            cameraHigh / 2 - y1
-        );
-        ctx.lineTo(
-            x2 + cameraWidth / 2,
-            cameraHigh / 2 - y2
-        );
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
         ctx.stroke();
+        ctx.closePath();
         previousPoint = point;
     });
 }
