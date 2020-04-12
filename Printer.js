@@ -53,8 +53,16 @@ function cutLineByScreen(previousPoint, point) {
         let factor = z1 / (z1 - z2);
         let delta_x = factor * Math.abs(x1 - x2);
         let delta_y = factor * Math.abs(y1 - y2);
-        x2 = x2 > x1 ? x1 + delta_x : x1 - delta_x;
-        y2 = y2 > y1 ? y1 + delta_y : y1 - delta_y;
+        console.log('linia przecinająca ekran');
+        console.log('Punkt za kamerą: ', x2, y2, z2);
+        console.log('Punkt przed kamerą: ', x1, y1, z1);
+        if (Math.abs(z2) > focalDistance) {
+            x2 = x2 > x1 ? x1 - delta_x : x1 + delta_x;
+            y2 = y2 > y1 ? y1 - delta_y : y1 + delta_y;
+        } else {
+            x2 = x2 < x1 ? x1 - delta_x : x1 + delta_x;
+            y2 = y2 < y1 ? y1 - delta_y : y1 + delta_y;
+        }
         d2 = 0;
     }
     return {x1, y1, d1, c1, x2, y2, d2, c2};

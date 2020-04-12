@@ -115,13 +115,8 @@ function resize(points) {
         if (point.type === OBJECT_TYPE.POINT) {
             let {x, y, z, ...params} = point;
             let fullDistance = z + focalDistance;
-            if (fullDistance > 0) {
                 x = x * zoomTimesFocal / fullDistance;
                 y = y * zoomTimesFocal / fullDistance;
-            } else if (fullDistance < 0) {
-                x += x - x * zoomTimesFocal / fullDistance;
-                y += y - y * zoomTimesFocal / fullDistance;
-            }
             let d = Math.sqrt(0.5 * (x * x + y * y) + 2 * z * z);
             return {x, y, z, d, ...params};
         } else {
