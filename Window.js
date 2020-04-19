@@ -8,7 +8,7 @@ let axis_y = 0;
 let axis_z = 0;
 //odgległość kamery od ekranu
 let zoom = 1;
-let focalDistance = 5;
+let focalDistance = 75;
 let cameraHigh;
 let cameraWidth;
 
