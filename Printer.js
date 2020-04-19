@@ -15,12 +15,16 @@ getPointColor = (distance, color) => {
     let opacity = distance === 0 ?
         1 : distance > 1000 ?
             0.125 : 1 - distance / 8000;
-    color = color === undefined ? {r: 0, g: 0, b: 0} : color;
+    color = color === undefined ?
+        {r: 0, g: 0, b: 0} : color;
     return `rgba(${color.r},${color.g},${color.b},${opacity})`;
 };
 
 getPointBlur = (distance) => {
-    return `blur(${distance < 1000 ? distance / 125 : 8}px)`;
+    let blur = distance < 150 ?
+        0 : distance < 1150 ?
+            (distance - 150) / 125 : 8;
+    return `blur(${blur}px)`;
 };
 
 getLinearGradient = (x1, y1, d1, c1, x2, y2, d2, c2) => {
@@ -53,9 +57,6 @@ function cutLineByScreen(previousPoint, point) {
         let factor = z1 / (z1 - z2);
         let delta_x = factor * Math.abs(x1 - x2);
         let delta_y = factor * Math.abs(y1 - y2);
-        console.log('linia przecinająca ekran');
-        console.log('Punkt za kamerą: ', x2, y2, z2);
-        console.log('Punkt przed kamerą: ', x1, y1, z1);
         if (Math.abs(z2) > focalDistance) {
             x2 = x2 > x1 ? x1 - delta_x : x1 + delta_x;
             y2 = y2 > y1 ? y1 - delta_y : y1 + delta_y;
