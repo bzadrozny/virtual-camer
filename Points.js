@@ -150,6 +150,18 @@ let points_3d = [
             {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: 350.0, c: {r: 180, g: 120, b: 120}},
         ]
     },
+
+    //top_figure
+    {
+        type: OBJECT_TYPE.FIGURE,
+        c: {r: 100, g: 210, b: 195},
+        points: [
+            {type: OBJECT_TYPE.POINT, x: 50.0, y: 200.0, z: 50.0, c: {r: 20, g: 70, b: 220}},
+            {type: OBJECT_TYPE.POINT, x: 150.0, y: 200.0, z: 50.0, c: {r: 180, g: 120, b: 120}},
+            {type: OBJECT_TYPE.POINT, x: 150.0, y: 300.0, z: 50.0, c: {r: 20, g: 70, b: 220}},
+            {type: OBJECT_TYPE.POINT, x: 50.0, y: 300.0, z: 50.0, c: {r: 180, g: 120, b: 120}},
+        ]
+    },
 ];
 
 let swipedPoints_3d = [];

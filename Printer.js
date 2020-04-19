@@ -11,29 +11,6 @@ printObjects = () => {
     });
 };
 
-getPointColor = (distance, color) => {
-    let opacity = distance === 0 ?
-        1 : distance > 1000 ?
-            0.125 : 1 - distance / 8000;
-    color = color === undefined ?
-        {r: 0, g: 0, b: 0} : color;
-    return `rgba(${color.r},${color.g},${color.b},${opacity})`;
-};
-
-getPointBlur = (distance) => {
-    let blur = distance < 150 ?
-        0 : distance < 1150 ?
-            (distance - 150) / 125 : 8;
-    return `blur(${blur}px)`;
-};
-
-getLinearGradient = (x1, y1, d1, c1, x2, y2, d2, c2) => {
-    let gradient = ctx.createLinearGradient(x1, y1, x2, y2);
-    gradient.addColorStop(0.0, getPointColor(d1, c1));
-    gradient.addColorStop(1.0, getPointColor(d2, c2));
-    return gradient;
-};
-
 printPoint = (point) => {
     let {x, y, z, d, c} = point;
     if (z < 0) return;
@@ -50,37 +27,12 @@ printPoint = (point) => {
     ctx.closePath();
 };
 
-function cutLineByScreen(previousPoint, point) {
-    let {x: x1, y: y1, z: z1, d: d1, c: c1} = previousPoint.z > point.z ? previousPoint : point;
-    let {x: x2, y: y2, z: z2, d: d2, c: c2} = previousPoint.z > point.z ? point : previousPoint;
-    if (z2 < 0) {
-        let factor = z1 / (z1 - z2);
-        let delta_x = factor * Math.abs(x1 - x2);
-        let delta_y = factor * Math.abs(y1 - y2);
-        if (Math.abs(z2) > focalDistance) {
-            x2 = x2 > x1 ? x1 - delta_x : x1 + delta_x;
-            y2 = y2 > y1 ? y1 - delta_y : y1 + delta_y;
-        } else {
-            x2 = x2 < x1 ? x1 - delta_x : x1 + delta_x;
-            y2 = y2 < y1 ? y1 - delta_y : y1 + delta_y;
+printLine = (line) => {
+    line.points.reduce((previousPoint, point) => {
+        if (previousPoint === 0 || (point.z < 0 && previousPoint.z < 0)) {
+            return point;
         }
-        d2 = 0;
-    }
-    return {x1, y1, d1, c1, x2, y2, d2, c2};
-}
-
-function printLine(line) {
-    let previousPoint;
-    line.points.forEach(point => {
-        if (previousPoint === undefined || (point.z < 0 && previousPoint.z < 0)) {
-            previousPoint = point;
-            return;
-        }
-        let {x1, y1, d1, c1, x2, y2, d2, c2} = cutLineByScreen(previousPoint, point);
-        x1 += cameraWidth / 2;
-        x2 += cameraWidth / 2;
-        y1 = cameraHigh / 2 - y1;
-        y2 = cameraHigh / 2 - y2;
+        let {x1, y1, d1, c1, x2, y2, d2, c2} = prepareLinePoints(previousPoint, point);
         ctx.strokeStyle = getLinearGradient(x1, y1, d1, c1, x2, y2, d2, c2);
         ctx.filter = getPointBlur(d1);
         ctx.beginPath();
@@ -88,11 +40,34 @@ function printLine(line) {
         ctx.lineTo(x2, y2);
         ctx.stroke();
         ctx.closePath();
-        previousPoint = point;
-    });
-}
+        return point;
+    }, 0);
+};
 
-function printFigure(figure) {
-
-}
+printFigure = (figure) => {
+    ctx.beginPath();
+    let points_amount = figure.points.length;
+    figure.points
+        .map((point, idx) => {
+            //TODO: cutting edges
+            let next_idx = points_amount === idx + 1 ? 0 : idx + 1;
+            if (point.z > 0 || figure.points[next_idx].z > 0) {
+                let {x1, y1, d1, c1, x2, y2, d2, c2} = prepareLinePoints(point, figure.points[next_idx]);
+                return point.z > figure.points[next_idx].z ?
+                    {x: x1, y: y1, d: d1, c: c1} :
+                    {x: x2, y: y2, d: d2, c: c2};
+            }
+        })
+        .filter(point => point !== undefined)
+        .forEach((point, idx) => {
+            if (idx === 0) {
+                ctx.moveTo(point.x, point.y);
+            } else {
+                ctx.lineTo(point.x, point.y);
+            }
+        });
+    //TODO: gradient from points
+    ctx.fillStyle = getPointColor(figure.d, figure.c);
+    ctx.fill();
+};
 
