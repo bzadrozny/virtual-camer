@@ -190,15 +190,20 @@ function spinPoints() {
 let angle_x, angle_y, angle_z, sin_x, cos_x, sin_y, cos_y, sin_z, cos_z;
 
 function spin(points) {
+    let spinx_x, spinx_y, spinx_z;
     return points.map(point => {
         if (point.type === OBJECT_TYPE.POINT) {
             let {x, y, z, ...params} = point;
-            let spinx_z = z * cos_x - y * sin_x;
-            let spinx_y = z * sin_x + y * cos_x;
+            spinx_z = z * cos_x - y * sin_x;
+            spinx_y = z * sin_x + y * cos_x;
             z = spinx_z;
             y = spinx_y;
-            x = (-z) * sin_y + x * cos_y;
-            return {x: y * sin_z + x * cos_z, y: y * cos_z - x * sin_z, z: z * cos_y + x * sin_y, ...params};
+            spinx_z = z * cos_y + x * sin_y;
+            spinx_x = (-z) * sin_y + x * cos_y;
+            x = spinx_x;
+            spinx_y = y * cos_z - x * sin_z;
+            spinx_x = y * sin_z + x * cos_z;
+            return {x: spinx_x, y: spinx_y, z: spinx_z, ...params};
         } else {
             let {points, ...params} = point;
             return {points: spin(points), ...params};
