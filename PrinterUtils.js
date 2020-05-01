@@ -1,3 +1,11 @@
+preparePoint = (x, y, params) => {
+    return {
+        x: x + cameraWidth / 2,
+        y: cameraHigh / 2 - y,
+        ...params
+    }
+};
+
 getPointColor = (distance, color) => {
     let opacity = distance === 0 ?
         1 : distance > 1000 ?
@@ -42,11 +50,46 @@ cutLineByScreen = (point_1, point_2) => {
 
 prepareLinePoints = (previousPoint, point) => {
     let {x1, y1, x2, y2, ...params} = cutLineByScreen(previousPoint, point);
+    previousPoint = preparePoint(x1, y1);
+    point = preparePoint(x2, y2);
     return {
-        x1: x1 + cameraWidth / 2,
-        y1: cameraHigh / 2 - y1,
-        x2: x2 + cameraWidth / 2,
-        y2: cameraHigh / 2 - y2,
+        x1: previousPoint.x, y1: previousPoint.y,
+        x2: point.x, y2: point.y,
         ...params
     };
+};
+
+getFigureCenterPoint = (points) => {
+    let centerPoint = points.reduce((center, point) => {
+        return {x: center.x + point.x, y: center.y + point.y};
+    }, {x: 0, y: 0});
+    return preparePoint(centerPoint.x / points.length, centerPoint.y / points.length);
+};
+
+getFigurePointGradient = (gradientCreator, point, center) => {
+    //TODO: do uzupełnienia gradient
+};
+
+prepareFigurePoints = (points) => {
+    let figure_points = [];
+    let addPoint = (point) => figure_points.push(point);
+    let addPointByParams = (x, y, d, c) => figure_points.push({x, y, d, c});
+    points.forEach((point, idx) => {
+        if (point.z >= 0) {
+            addPoint(preparePoint(point.x, point.y, {d: point.d, c: point.c}));
+        } else {
+            let prev_point = points[-1 === idx - 1 ? points.length - 1 : idx - 1];
+            let next_point = points[points.length === idx + 1 ? 0 : idx + 1];
+            if (prev_point.z > 0 && next_point.z > 0) {
+                prev_point = prepareLinePoints(point, prev_point);
+                addPointByParams(prev_point.x2, prev_point.y2, prev_point.d2, prev_point.c2);
+                next_point = prepareLinePoints(point, next_point);
+                addPointByParams(next_point.x2, next_point.y2, next_point.d2, next_point.c2);
+            } else if (prev_point.z < 0 ^ next_point.z < 0) {
+                let {x2, y2, d2, c2} = prepareLinePoints(point, prev_point.z > 0 ? prev_point : next_point);
+                addPointByParams(x2, y2, d2, c2);
+            }
+        }
+    });
+    return figure_points;
 };

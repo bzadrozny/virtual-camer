@@ -49,29 +49,21 @@ printLine = (line) => {
 };
 
 printFigure = (figure) => {
-    ctx.beginPath();
-    let points_amount = figure.points.length;
-    figure.points
-        .map((point, idx) => {
-            //TODO: cutting edges
-            let next_idx = points_amount === idx + 1 ? 0 : idx + 1;
-            if (point.z > 0 || figure.points[next_idx].z > 0) {
-                let {x1, y1, d1, c1, x2, y2, d2, c2} = prepareLinePoints(point, figure.points[next_idx]);
-                return point.z > figure.points[next_idx].z ?
-                    {x: x1, y: y1, d: d1, c: c1} :
-                    {x: x2, y: y2, d: d2, c: c2};
-            }
-        })
-        .filter(point => point !== undefined)
-        .forEach((point, idx) => {
+    let centerPoint = getFigureCenterPoint(figure.points);
+    let figure_points = prepareFigurePoints(figure.points);
+    figure_points.forEach(point => {
+        ctx.beginPath();
+        figure_points.forEach((point, idx) => {
             if (idx === 0) {
                 ctx.moveTo(point.x, point.y);
             } else {
                 ctx.lineTo(point.x, point.y);
             }
         });
-    //TODO: gradient from points
-    ctx.fillStyle = getPointColor(figure.d, figure.c);
-    ctx.fill();
+        //TODO: do weryfikacji, czy gradient zbyt nie obciąża czasu obliczeniowego
+        ctx.fillStyle = getFigurePointGradient(ctx.createRadialGradient, point, centerPoint);
+        ctx.fill();
+    });
+
 };
 
