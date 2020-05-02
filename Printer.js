@@ -51,19 +51,15 @@ printLine = (line) => {
 printFigure = (figure) => {
     let centerPoint = getFigureCenterPoint(figure.points);
     let figure_points = prepareFigurePoints(figure.points);
-    figure_points.forEach(point => {
-        ctx.beginPath();
-        figure_points.forEach((point, idx) => {
-            if (idx === 0) {
-                ctx.moveTo(point.x, point.y);
-            } else {
-                ctx.lineTo(point.x, point.y);
-            }
-        });
-        //TODO: do weryfikacji, czy gradient zbyt nie obciąża czasu obliczeniowego
-        ctx.fillStyle = getFigurePointGradient(ctx.createRadialGradient, point, centerPoint);
-        ctx.fill();
+    ctx.beginPath();
+    figure_points.forEach((point, idx) => {
+        if (idx === 0) {
+            ctx.moveTo(point.x, point.y);
+        } else {
+            ctx.lineTo(point.x, point.y);
+        }
     });
-
+    ctx.fillStyle = getPointColor(figure.d, figure.c);
+    ctx.fill();
 };
 
