@@ -1,13 +1,13 @@
 //położenie kamery
-let factor_x = 0;
+let factor_x = 135;
 let factor_y = 0;
-let factor_z = 0;
+let factor_z = -200;
 //kąt w radianach
 let axis_x = 0;
-let axis_y = 0;
+let axis_y = -55;
 let axis_z = 0;
 //odgległość kamery od ekranu
-let zoom = 1;
+let zoom = 4;
 let focalDistance = 75;
 let cameraHigh;
 let cameraWidth;
