@@ -3,11 +3,11 @@ let ctx;
 printObjects = () => {
     ctx = document.getElementById('myCanvas').getContext("2d");
     ctx.clearRect(0, 0, cameraWidth, cameraHigh);
-    mappedPoints_2d.sort((p1, p2) => {
-        return p1.z !== p2.z ?
-            (p1.z < p2.z ? 1 : p1.z === p2.z ? 0 : -1) :
-            (p1.d < p2.d ? 1 : p1.d === p2.d ? 0 : -1);
-    });
+    mappedPoints_2d.sort((p1, p2) =>
+        Math.abs(p1.z - p2.z) > 10 ?
+            p1.z < p2.z ? 1 : p1.z === p2.z ? 0 : -1 :
+            p1.d < p2.d ? 1 : p1.d === p2.d ? 0 : -1
+    );
     mappedPoints_2d.forEach(object => {
         if (object.type === OBJECT_TYPE.POINT) printPoint(object);
         else if (object.type === OBJECT_TYPE.LINE) printLine(object);
