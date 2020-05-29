@@ -500,7 +500,7 @@ let points_3d = [
         points: [
             {type: OBJECT_TYPE.POINT, x: -15.0, y: 0.0, z: 30.0},
             {type: OBJECT_TYPE.POINT, x: 15.0, y: 0.0, z: 30.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: 150.0, z: 0.0},
+            {type: OBJECT_TYPE.POINT, x: 0.0, y: 100.0, z: 0.0},
         ]
     },
     {
@@ -509,7 +509,7 @@ let points_3d = [
         points: [
             {type: OBJECT_TYPE.POINT, x: -15.0, y: 0.0, z: 30.0},
             {type: OBJECT_TYPE.POINT, x: 15.0, y: 0.0, z: 30.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: -150.0, z: 0.0},
+            {type: OBJECT_TYPE.POINT, x: 0.0, y: -100.0, z: 0.0},
         ]
     },
     {
@@ -518,7 +518,7 @@ let points_3d = [
         points: [
             {type: OBJECT_TYPE.POINT, x: 15.0, y: 0.0, z: 30.0},
             {type: OBJECT_TYPE.POINT, x: 30.0, y: 0.0, z: 15.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: 150.0, z: 0.0},
+            {type: OBJECT_TYPE.POINT, x: 0.0, y: 100.0, z: 0.0},
         ]
     },
     {
@@ -527,7 +527,7 @@ let points_3d = [
         points: [
             {type: OBJECT_TYPE.POINT, x: 15.0, y: 0.0, z: 30.0},
             {type: OBJECT_TYPE.POINT, x: 30.0, y: 0.0, z: 15.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: -150.0, z: 0.0},
+            {type: OBJECT_TYPE.POINT, x: 0.0, y: -100.0, z: 0.0},
         ]
     },
     {
@@ -536,7 +536,7 @@ let points_3d = [
         points: [
             {type: OBJECT_TYPE.POINT, x: 30.0, y: 0.0, z: 15.0},
             {type: OBJECT_TYPE.POINT, x: 30.0, y: 0.0, z: -15.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: 150.0, z: 0.0},
+            {type: OBJECT_TYPE.POINT, x: 0.0, y: 100.0, z: 0.0},
         ]
     },
     {
@@ -545,7 +545,7 @@ let points_3d = [
         points: [
             {type: OBJECT_TYPE.POINT, x: 30.0, y: 0.0, z: 15.0},
             {type: OBJECT_TYPE.POINT, x: 30.0, y: 0.0, z: -15.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: -150.0, z: 0.0},
+            {type: OBJECT_TYPE.POINT, x: 0.0, y: -100.0, z: 0.0},
         ]
     },
     {
@@ -554,7 +554,7 @@ let points_3d = [
         points: [
             {type: OBJECT_TYPE.POINT, x: 30.0, y: 0.0, z: -15.0},
             {type: OBJECT_TYPE.POINT, x: 15.0, y: 0.0, z: -30.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: 150.0, z: 0.0},
+            {type: OBJECT_TYPE.POINT, x: 0.0, y: 100.0, z: 0.0},
         ]
     },
     {
@@ -563,7 +563,7 @@ let points_3d = [
         points: [
             {type: OBJECT_TYPE.POINT, x: 30.0, y: 0.0, z: -15.0},
             {type: OBJECT_TYPE.POINT, x: 15.0, y: 0.0, z: -30.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: -150.0, z: 0.0},
+            {type: OBJECT_TYPE.POINT, x: 0.0, y: -100.0, z: 0.0},
         ]
     },
     {
@@ -572,7 +572,7 @@ let points_3d = [
         points: [
             {type: OBJECT_TYPE.POINT, x: 15.0, y: 0.0, z: -30.0},
             {type: OBJECT_TYPE.POINT, x: -15.0, y: 0.0, z: -30.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: 150.0, z: 0.0},
+            {type: OBJECT_TYPE.POINT, x: 0.0, y: 100.0, z: 0.0},
         ]
     },
     {
@@ -581,7 +581,7 @@ let points_3d = [
         points: [
             {type: OBJECT_TYPE.POINT, x: 15.0, y: 0.0, z: -30.0},
             {type: OBJECT_TYPE.POINT, x: -15.0, y: 0.0, z: -30.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: -150.0, z: 0.0},
+            {type: OBJECT_TYPE.POINT, x: 0.0, y: -100.0, z: 0.0},
         ]
     },
     {
@@ -590,7 +590,7 @@ let points_3d = [
         points: [
             {type: OBJECT_TYPE.POINT, x: -15.0, y: 0.0, z: -30.0},
             {type: OBJECT_TYPE.POINT, x: -30.0, y: 0.0, z: -15.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: 150.0, z: 0.0},
+            {type: OBJECT_TYPE.POINT, x: 0.0, y: 100.0, z: 0.0},
         ]
     },
     {
@@ -599,7 +599,7 @@ let points_3d = [
         points: [
             {type: OBJECT_TYPE.POINT, x: -15.0, y: 0.0, z: -30.0},
             {type: OBJECT_TYPE.POINT, x: -30.0, y: 0.0, z: -15.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: -150.0, z: 0.0},
+            {type: OBJECT_TYPE.POINT, x: 0.0, y: -100.0, z: 0.0},
         ]
     },
     {
@@ -608,7 +608,7 @@ let points_3d = [
         points: [
             {type: OBJECT_TYPE.POINT, x: -30.0, y: 0.0, z: -15.0},
             {type: OBJECT_TYPE.POINT, x: -30.0, y: 0.0, z: 15.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: 150.0, z: 0.0},
+            {type: OBJECT_TYPE.POINT, x: 0.0, y: 100.0, z: 0.0},
         ]
     },
     {
@@ -617,7 +617,7 @@ let points_3d = [
         points: [
             {type: OBJECT_TYPE.POINT, x: -30.0, y: 0.0, z: -15.0},
             {type: OBJECT_TYPE.POINT, x: -30.0, y: 0.0, z: 15.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: -150.0, z: 0.0},
+            {type: OBJECT_TYPE.POINT, x: 0.0, y: -100.0, z: 0.0},
         ]
     },
     {
@@ -626,7 +626,7 @@ let points_3d = [
         points: [
             {type: OBJECT_TYPE.POINT, x: -30.0, y: 0.0, z: 15.0},
             {type: OBJECT_TYPE.POINT, x: -15.0, y: 0.0, z: 30.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: 150.0, z: 0.0},
+            {type: OBJECT_TYPE.POINT, x: 0.0, y: 100.0, z: 0.0},
         ]
     },
     {
@@ -635,7 +635,7 @@ let points_3d = [
         points: [
             {type: OBJECT_TYPE.POINT, x: -30.0, y: 0.0, z: 15.0},
             {type: OBJECT_TYPE.POINT, x: -15.0, y: 0.0, z: 30.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: -150.0, z: 0.0},
+            {type: OBJECT_TYPE.POINT, x: 0.0, y: -100.0, z: 0.0},
         ]
     },
 ];
