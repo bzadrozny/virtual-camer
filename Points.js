@@ -60,584 +60,438 @@ let points_3d = [
             {type: OBJECT_TYPE.POINT, x: -75.0, y: -50.0, z: -75.0},
         ]
     },
-    //second - - +
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 120, b: 120},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: -50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: -50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: -75.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: -75.0, z: 50.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 190, b: 190},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: -50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: -50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: -50.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: -50.0, z: 75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 220, g: 230, b: 230},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: -50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: -75.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: -75.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: -50.0, z: 75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 120, b: 120},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: -50.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: -50.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: -75.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: -75.0, z: 75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 190, b: 190},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: -75.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: -75.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: -75.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: -75.0, z: 75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 220, g: 230, b: 230},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: -50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: -75.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: -75.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: -50.0, z: 75.0},
-        ]
-    },
-    //third - + -
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 120, b: 120},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: -50.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 190, b: 190},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: -75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 220, g: 230, b: 230},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: -75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 120, b: 120},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: -75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 190, b: 190},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: -75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 220, g: 230, b: 230},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: -75.0},
-        ]
-    },
-
-    //fourth + - -
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 120, b: 120},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: -50.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 190, b: 190},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: -75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 220, g: 230, b: 230},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: -75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 120, b: 120},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: -75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 190, b: 190},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: -75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 220, g: 230, b: 230},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: -75.0},
-        ]
-    },
-
-    //fifth + + -
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 120, b: 120},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: -50.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 190, b: 190},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: -75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 220, g: 230, b: 230},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: -75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 120, b: 120},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: -75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 190, b: 190},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: -75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 220, g: 230, b: 230},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: -50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: -75.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: -75.0},
-        ]
-    },
-
-    //sixth + - +
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 120, b: 120},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: 50.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 190, b: 190},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: 75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 220, g: 230, b: 230},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: 75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 120, b: 120},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: 75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 190, b: 190},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: 75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 220, g: 230, b: 230},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: 75.0},
-        ]
-    },
-
-    //seventh - + +
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 120, b: 120},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: 50.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 190, b: 190},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: 75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 220, g: 230, b: 230},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: 75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 120, b: 120},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: 75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 190, b: 190},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: 75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 220, g: 230, b: 230},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: 75.0},
-        ]
-    },
-
-    //eight + + +
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 120, b: 120},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: 50.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 190, b: 190},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: 75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 220, g: 230, b: 230},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: 75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 120, b: 120},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: 75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 255, g: 190, b: 190},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: 75.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 220, g: 230, b: 230},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: 50.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: 75.0},
-            {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: 75.0},
-        ]
-    },
-
-    //cristal
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 190, g: 255, b: 255},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -15.0, y: 0.0, z: 30.0},
-            {type: OBJECT_TYPE.POINT, x: 15.0, y: 0.0, z: 30.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: 100.0, z: 0.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 175, g: 255, b: 255},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -15.0, y: 0.0, z: 30.0},
-            {type: OBJECT_TYPE.POINT, x: 15.0, y: 0.0, z: 30.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: -100.0, z: 0.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 170, g: 255, b: 255},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 15.0, y: 0.0, z: 30.0},
-            {type: OBJECT_TYPE.POINT, x: 30.0, y: 0.0, z: 15.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: 100.0, z: 0.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 155, g: 255, b: 255},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 15.0, y: 0.0, z: 30.0},
-            {type: OBJECT_TYPE.POINT, x: 30.0, y: 0.0, z: 15.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: -100.0, z: 0.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 190, g: 255, b: 255},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 30.0, y: 0.0, z: 15.0},
-            {type: OBJECT_TYPE.POINT, x: 30.0, y: 0.0, z: -15.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: 100.0, z: 0.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 175, g: 255, b: 255},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 30.0, y: 0.0, z: 15.0},
-            {type: OBJECT_TYPE.POINT, x: 30.0, y: 0.0, z: -15.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: -100.0, z: 0.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 170, g: 255, b: 255},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 30.0, y: 0.0, z: -15.0},
-            {type: OBJECT_TYPE.POINT, x: 15.0, y: 0.0, z: -30.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: 100.0, z: 0.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 155, g: 255, b: 255},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 30.0, y: 0.0, z: -15.0},
-            {type: OBJECT_TYPE.POINT, x: 15.0, y: 0.0, z: -30.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: -100.0, z: 0.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 190, g: 255, b: 255},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 15.0, y: 0.0, z: -30.0},
-            {type: OBJECT_TYPE.POINT, x: -15.0, y: 0.0, z: -30.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: 100.0, z: 0.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 175, g: 255, b: 255},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: 15.0, y: 0.0, z: -30.0},
-            {type: OBJECT_TYPE.POINT, x: -15.0, y: 0.0, z: -30.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: -100.0, z: 0.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 170, g: 255, b: 255},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -15.0, y: 0.0, z: -30.0},
-            {type: OBJECT_TYPE.POINT, x: -30.0, y: 0.0, z: -15.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: 100.0, z: 0.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 155, g: 255, b: 255},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -15.0, y: 0.0, z: -30.0},
-            {type: OBJECT_TYPE.POINT, x: -30.0, y: 0.0, z: -15.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: -100.0, z: 0.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 190, g: 255, b: 255},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -30.0, y: 0.0, z: -15.0},
-            {type: OBJECT_TYPE.POINT, x: -30.0, y: 0.0, z: 15.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: 100.0, z: 0.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 175, g: 255, b: 255},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -30.0, y: 0.0, z: -15.0},
-            {type: OBJECT_TYPE.POINT, x: -30.0, y: 0.0, z: 15.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: -100.0, z: 0.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 170, g: 255, b: 255},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -30.0, y: 0.0, z: 15.0},
-            {type: OBJECT_TYPE.POINT, x: -15.0, y: 0.0, z: 30.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: 100.0, z: 0.0},
-        ]
-    },
-    {
-        type: OBJECT_TYPE.FIGURE,
-        c: {r: 155, g: 255, b: 255},
-        points: [
-            {type: OBJECT_TYPE.POINT, x: -30.0, y: 0.0, z: 15.0},
-            {type: OBJECT_TYPE.POINT, x: -15.0, y: 0.0, z: 30.0},
-            {type: OBJECT_TYPE.POINT, x: 0.0, y: -100.0, z: 0.0},
-        ]
-    },
+    // //second - - +
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 120, b: 120},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: -50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: -50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: -75.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: -75.0, z: 50.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 190, b: 190},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: -50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: -50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: -50.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: -50.0, z: 75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 220, g: 230, b: 230},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: -50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: -75.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: -75.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: -50.0, z: 75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 120, b: 120},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: -50.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: -50.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: -75.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: -75.0, z: 75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 190, b: 190},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: -75.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: -75.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: -75.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: -75.0, z: 75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 220, g: 230, b: 230},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: -50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: -75.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: -75.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: -50.0, z: 75.0},
+    //     ]
+    // },
+    // //third - + -
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 120, b: 120},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: -50.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 190, b: 190},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: -75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 220, g: 230, b: 230},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: -75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 120, b: 120},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: -75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 190, b: 190},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: -75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 220, g: 230, b: 230},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: -75.0},
+    //     ]
+    // },
+    //
+    // //fourth + - -
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 120, b: 120},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: -50.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 190, b: 190},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: -75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 220, g: 230, b: 230},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: -75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 120, b: 120},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: -75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 190, b: 190},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: -75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 220, g: 230, b: 230},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: -75.0},
+    //     ]
+    // },
+    //
+    // //fifth + + -
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 120, b: 120},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: -50.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 190, b: 190},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: -75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 220, g: 230, b: 230},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: -75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 120, b: 120},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: -75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 190, b: 190},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: -75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 220, g: 230, b: 230},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: -50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: -75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: -75.0},
+    //     ]
+    // },
+    //
+    // //sixth + - +
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 120, b: 120},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: 50.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 190, b: 190},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: 75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 220, g: 230, b: 230},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: 75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 120, b: 120},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -50.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: 75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 190, b: 190},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: -75.0, z: 75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 220, g: 230, b: 230},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -75.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: -50.0, z: 75.0},
+    //     ]
+    // },
+    //
+    // //seventh - + +
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 120, b: 120},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: 50.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 190, b: 190},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: 75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 220, g: 230, b: 230},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: 75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 120, b: 120},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 50.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: 75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 190, b: 190},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -50.0, y: 75.0, z: 75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 220, g: 230, b: 230},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 75.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: -75.0, y: 50.0, z: 75.0},
+    //     ]
+    // },
+    //
+    // //eight + + +
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 120, b: 120},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: 50.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 190, b: 190},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: 75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 220, g: 230, b: 230},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: 75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 120, b: 120},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 50.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: 75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 255, g: 190, b: 190},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 50.0, y: 75.0, z: 75.0},
+    //     ]
+    // },
+    // {
+    //     type: OBJECT_TYPE.FIGURE,
+    //     c: {r: 220, g: 230, b: 230},
+    //     points: [
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: 50.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 75.0, z: 75.0},
+    //         {type: OBJECT_TYPE.POINT, x: 75.0, y: 50.0, z: 75.0},
+    //     ]
+    // }
 ];
 
 let swipedPoints_3d = [];
@@ -718,7 +572,7 @@ function resize(points) {
                 x = x * zoomTimesFocal;
                 y = y * zoomTimesFocal;
             }
-            let d = Math.sqrt((x * x + y * y) + z * z);
+            let d = Math.sqrt(x * x + y * y + z * z);
             return {x, y, z, d, ...params};
         } else {
             let {points, ...params} = point;

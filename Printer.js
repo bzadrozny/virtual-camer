@@ -5,7 +5,7 @@ printObjects = () => {
     mappedPoints_2d.sort((p1, p2) => {
             let commonExtrema = getCommonExtrema(p1, p2);
             return commonExtrema !== 0 ?
-                sortCoveredFigures(p1, p2, commonExtrema) :
+                compareCoveredFigures(p1, p2, commonExtrema) :
                 p1.d < p2.d ? 1 : p1.d === p2.d ? 0 : -1
         }
     );
@@ -43,28 +43,31 @@ getFiguresExtrema = (figure) => {
     return {t, r, b, l}
 };
 
-sortCoveredFigures = (figure1, figure2, commonExtrema) => {
-    for (let i = 0; i < figure1.points.length; i++) {
-        if (isPointInSquare(figure1.points[i], commonExtrema) && isPointInFigure(figure1.points[i], figure2.points)) {
-            let figure2_z = getZOfPointInFigure(figure1.points[i].x, figure1.points[i].y, figure2.points);
-            return figure1.points[i].z < figure2_z ? 1 : figure1.points[i].z === figure2_z ? 0 : -1;
-        }
-    }
-    for (let i = 0; i < figure2.points.length; i++) {
-        if (isPointInSquare(figure2.points[i], commonExtrema) && isPointInFigure(figure2.points[i], figure1.points)) {
-            let figure1_z = getZOfPointInFigure(figure2.points[i].x, figure2.points[i].y, figure1.points);
-            return figure2.points[i].z < figure1_z ? 1 : figure2.points[i].z === figure1_z ? 0 : -1;
+compareCoveredFigures = (figure1, figure2, commonExtrema) => {
+    for (let y = commonExtrema.b; y <= commonExtrema.t; y++) {
+        for (let x = commonExtrema.l; x <= commonExtrema.r; x++) {
+            if (isPointInFigure({x, y}, figure1.points) && isPointInFigure({x, y}, figure2.points)) {
+                let z1 = getZOfPointInFigure(x, y, figure1.points);
+                let z2 = getZOfPointInFigure(x, y, figure2.points);
+                console.log(figure1, z1, figure2, z2)
+                console.log(x, y);
+                return z1 < z2 ? 1 : z1 === z2 ? 0 : -1;
+            }
         }
     }
     return figure1.d < figure2.d ? 1 : figure1.d === figure2.d ? 0 : -1;
 };
 
-isPointInSquare = (point, square) => {
-    return square.l <= point.x && point.x <= square.r && square.b <= point.y && point.y <= square.t;
-};
-
 isPointInFigure = (point, points) => {
-    return true;
+    let j = 3;
+    let result = false;
+    for (let i = 0; i < 3; i++) {
+        let difY = (points[i].y > point.y) ^ (points[j].y > point.y);
+        let inX = (point.x < (points[i].x + (points[j].x - points[i].x) * (point.y - points[i].y) / (points[j].y - points[i].y)));
+        if (difY && inX) result = !result;
+        j = i;
+    }
+    return result;
 };
 
 getZOfPointInFigure = (x, y, points) => {
