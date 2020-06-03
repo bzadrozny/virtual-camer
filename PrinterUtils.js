@@ -59,17 +59,6 @@ prepareLinePoints = (previousPoint, point) => {
     };
 };
 
-getFigureCenterPoint = (points) => {
-    let centerPoint = points.reduce((center, point) => {
-        return {x: center.x + point.x, y: center.y + point.y};
-    }, {x: 0, y: 0});
-    return preparePoint(centerPoint.x / points.length, centerPoint.y / points.length);
-};
-
-getFigurePointGradient = (gradientCreator, point, center) => {
-    //TODO: do uzupełnienia gradient
-};
-
 prepareFigurePoints = (points) => {
     let figure_points = [];
     let addPoint = (point) => figure_points.push(point);
